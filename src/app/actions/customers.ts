@@ -26,7 +26,7 @@ export async function createCustomer(formData: FormData) {
         revalidatePath("/quotes/new");
     } catch (e) {
         console.error("Failed to create customer", e);
-        // throw e; // Optional: let it fail visibly if needed
+        // throw e; 
     }
 }
 
