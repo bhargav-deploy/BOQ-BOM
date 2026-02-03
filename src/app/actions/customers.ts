@@ -24,10 +24,9 @@ export async function createCustomer(formData: FormData) {
         });
         revalidatePath("/customers");
         revalidatePath("/quotes/new");
-        return { success: true };
     } catch (e) {
         console.error("Failed to create customer", e);
-        return { success: false, error: "Failed to create customer" };
+        // throw e; // Optional: let it fail visibly if needed
     }
 }
 
